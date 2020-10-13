@@ -30,10 +30,10 @@ Coming soon.
 This began with an adventure game tutorial by Web Dev Simplified on YouTube (https://www.youtube.com/watch?v=R1S_NhKkvGA). I completed the tutorial, then went through and changed the story from a traditional adventure story (swords, castles, merchants, etc.) to a mall story. I also changed up the styling a bit to reflect a more 80s aesthetic.
 
 ## Link to Deployed Application
-Coming soon.
+https://alyssahellrung.github.io/adventureMallWithZombies/
 
 ## Link to GitHub Repo    
-(https://github.com/alyssahellrung/adventureMallWithZombies)
+https://github.com/alyssahellrung/adventureMallWithZombies
 
 ## Future Development Ideas
 I would love to turn this into a more robust game with various playable characters and the ability to have more items in the player's inventory. Pictures to accompany each question would be cool too.
