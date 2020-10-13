@@ -104,6 +104,91 @@ const textNodes = [
         nextText: -1
       }
     ]
+  },
+  {
+    id: 5,
+    text: "Without any money to buy a room, you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 6,
+    text: "You wake up well rested and full of energy, ready to explore the nearby castle.",
+    options: [
+      {
+        text: "Explore the castle",
+        nextText: 7
+      }
+    ]
+  },
+  {
+    id: 7,
+    text: "While exploring the castle you come across a horrible monster in your path.",
+    options: [
+      {
+        text: "Try to run",
+        nextText: 8
+      },
+      {
+        text: "Attack it with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 9
+      },
+      {
+        text:"Hide behind your shield",
+        requiredState: (currentState) => currentState.shield,
+        nextText: 10
+      },
+      {
+        text: "Throw the blue goo at it",
+        requiredState: (currentState) => currentState.blueGoo,
+        nextText: 11
+      }
+    ]
+  },
+  {
+    id: 8,
+    text: "Your attempts to run are in vain. The monster easily catches you.",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 9,
+    text: "You foolishly thought this monster could be slain with a single sword?",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 10,
+    text: "The monster laughs as you hide behind your shield. He eats you.",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 11,
+    text: "You throw your jar of blue goo at the monster and it explodes! After the dust settles, you see the monster has been destroyed. Seeing your victory, you decide to claim this castle as your own. You live out the rest of your days there.",
+    options: [
+      {
+        text: "Congratulations! Play again?",
+        nextText: -1
+      }
+    ]
   }
 ]
 
