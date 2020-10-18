@@ -1,7 +1,7 @@
 # ADVENTURE MALL (WITH ZOMBIES)
 
 ## Description  
-You're at the raddest mall in town and feeling really cool. Shop around at all of the most popular stores, but watch out for the zombie dudes because they are grody to the max!
+You're at the raddest mall in town and feeling really cool. Shop around at all of the most popular stores, but watch out for zombies  because they are grody to the max!
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ CSS
 Javascript      
 
 ## How to Use  
-Coming soon.
+Navigate to https://alyssahellrung.github.io/adventureMallWithZombies/. Follow the story and answer the questions. Have fun!
 
 ## How I Made This  
 This began with an adventure game tutorial by Web Dev Simplified on YouTube (https://www.youtube.com/watch?v=R1S_NhKkvGA). I completed the tutorial, then went through and changed the story from a traditional adventure story (swords, castles, merchants, etc.) to a mall story. I also changed up the styling a bit to reflect a more 80s aesthetic.
@@ -36,4 +36,4 @@ https://alyssahellrung.github.io/adventureMallWithZombies/
 https://github.com/alyssahellrung/adventureMallWithZombies
 
 ## Future Development Ideas
-I would love to turn this into a more robust game with various playable characters and the ability to have more items in the player's inventory. Pictures to accompany each question would be cool too.
+I would love to turn this into a more robust game with various playable characters and the ability to have more items in the player's inventory. Also, pictures to accompany each question would be totally tubular.

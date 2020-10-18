@@ -42,62 +42,67 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: "You wake up in a strange place and you see a jar of blue goo near you.",
+    text: "Your mom drops you off at the mall and someone offers you a free Orange Julius sample when you walk through the doors.",
     options: [
       {
-        text: "Take goo",
-        setState: { blueGoo: true },
+        text: "Take Orange Julius",
+        setState: { julius: true },
         nextText: 2
       },
       {
-        text: "Leave the goo",
+        text: "Leave the Orange Julius",
         nextText: 2
       }
     ]
   },
   { 
     id: 2,
-    text: "You venture forth in search of answers to where you are when you come across a merchant.",
+    text: "You head to the food court to meet your friends, Heather and Courtney. They already have snacks and ask if you want to trade.",
     options: [
       {
-        text: "Trade the goo for a sword",
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
+        text: "Trade your Orange Julius for Heather's froyo.",
+        requiredState: (currentState) => currentState.julius,
+        setState: { julius: false, froyo: true },
         nextText: 3
       },
       {
-        text: "Trade the goo for a shield",
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
+        text: "Trade your Orange Julius for Courtney's soft pretzel.",
+        requiredState: (currentState) => currentState.julius,
+        setState: { julius: false, pretzel: true },
         nextText: 3
       },
       {
-        text: "Ignore the merchant",
+        text: "Say, 'This Orange Julius is bodacious. I don't want to trade!'",
+        requiredState: (currentState) => currentState.julius,
+        nextText: 3
+      },
+      {
+        text: "Tell them you don't have anything to trade.",
         nextText: 3
       }
     ]
   },
   {
     id: 3,
-    text: "After leaving the merchant, you start to feel tired and stumble upon a small town next to a dangerous looking castle.",
+    text: "After leaving the food court, you can't wait to go shopping.",
     options: [
       {
-        text: "Explore the castle",
+        text: "Go to B.Dalton to check out the new Sweet Valley High books.",
         nextText: 4
       },
       {
-        text: "Find a room in the town to sleep in",
+        text: "Go to Afterthoughts to find a 'best friends' necklace.",
         nextText: 5
       },
       {
-        text: "Find some hay in a stable to sleep in",
+        text: "Go to the Esprit store to get a pair of acid wash, high-waisted jeans.",
         nextText: 6
       }
     ]
   },
   {
     id: 4,
-    text: "You are so tired that you fall asleep while exploring the castle and you are killed by a terrible monster in your sleep.",
+    text: "Bummer, you've already read all of the SVH books and B.Dalton doesn't have the newest one in stock yet. You decide to look for a new Christopher Pike book instead when BAM! A zombie finds you and eats your brain!",
     options: [
       {
         text: "Restart",
@@ -107,7 +112,7 @@ const textNodes = [
   },
   {
     id: 5,
-    text: "Without any money to buy a room, you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.",
+    text: "You find a really cute 'best friends' necklace, but then Courtney and Heather both assume the other half is for them. They get so mad at you that they buy their own 'best friends' necklace and leave you alone. A zombie appears from behind the ear-piercing station and eats your brain!",
     options: [
       {
         text: "Restart",
@@ -117,42 +122,42 @@ const textNodes = [
   },
   {
     id: 6,
-    text: "You wake up well rested and full of energy, ready to explore the nearby castle.",
+    text: "You find the perfect pair of jeans. They look exactly like the ones all of the popular girls at school wear. Unfortunately, they were expensive and you have almost no money left. Heather and Courtney convince you to go to Sam Goody anyway.",
     options: [
       {
-        text: "Explore the castle",
+        text: "Go to Sam Goody",
         nextText: 7
       }
     ]
   },
   {
     id: 7,
-    text: "While exploring the castle you come across a horrible monster in your path.",
+    text: "You're in Sam Goody with headphones on, listening to selections from Debbie Gibson's 'Out of the Blue' when you feel a tap on your shoulder. Thinking it's Heather or Courtney, you turn and look. It is Heather and Courtney, but they are different. They've been turned into zombies!",
     options: [
       {
         text: "Try to run",
         nextText: 8
       },
       {
-        text: "Attack it with your sword",
-        requiredState: (currentState) => currentState.sword,
+        text: "Throw your froyo at them",
+        requiredState: (currentState) => currentState.froyo,
         nextText: 9
       },
       {
-        text:"Hide behind your shield",
-        requiredState: (currentState) => currentState.shield,
+        text:"Offer your pretzel to them",
+        requiredState: (currentState) => currentState.pretzel,
         nextText: 10
       },
       {
-        text: "Throw the blue goo at it",
-        requiredState: (currentState) => currentState.blueGoo,
+        text: "Throw the Orange Julius at them",
+        requiredState: (currentState) => currentState.julius,
         nextText: 11
       }
     ]
   },
   {
     id: 8,
-    text: "Your attempts to run are in vain. The monster easily catches you.",
+    text: "Your attempts to run are in vain. Heather was on the track team! Even now she easily catches you and turns you into a brain-hungry zombie!",
     options: [
       {
         text: "Restart",
@@ -162,7 +167,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "You foolishly thought this monster could be slain with a single sword?",
+    text: "Why would froyo stop zombies? They want your brain! The zombie girls catch you and turn you into a zombie too!",
     options: [
       {
         text: "Restart",
@@ -172,7 +177,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: "The monster laughs as you hide behind your shield. He eats you.",
+    text: "Zombie Heather and Zombie Courtney laugh at your ridiculous attempt to appease them. They don't want pretzels, they want BRAINS! They grab you and turn you into a zombie!",
     options: [
       {
         text: "Restart",
@@ -182,10 +187,10 @@ const textNodes = [
   },
   {
     id: 11,
-    text: "You throw your jar of blue goo at the monster and it explodes! After the dust settles, you see the monster has been destroyed. Seeing your victory, you decide to claim this castle as your own. You live out the rest of your days there.",
+    text: "You throw your Orange Julius at the zombie girls and the citric acid burns their skin! While they are distracted, you pull a fire alarm. Thinking there is a fire, everyone evacuates. You watch as Zombie Heather and Zombie Courtney melt from the power of the Orange Julius. Eventually they disappear entirely. You evacuate with everyone else, call your mom from a payphone, and she picks you up and takes you home.",
     options: [
       {
-        text: "Congratulations! Play again?",
+        text: "Congratulations, you saved the mall! Play again?",
         nextText: -1
       }
     ]
